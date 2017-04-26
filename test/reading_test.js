@@ -8,7 +8,7 @@ describe('Reading users out from the database', () => {
 		sunny.save()
 			.then(() => done());
 	});
-	
+
 	it('find all the users with name Sunny', (done) => {
 		User.find({name: 'Sunny'})
 			.then((users) => {
@@ -21,6 +21,7 @@ describe('Reading users out from the database', () => {
 		User.findOne({ _id: sunny._id })
 			.then((user) => {
 				assert(user.name === 'Sunny');
+				// test git
 				done();
 			});
 	});
